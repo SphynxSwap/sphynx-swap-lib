@@ -1,6 +1,6 @@
 {
   "name": "@sphynxswap/sphynx-swap-lib",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Sphynx Swap Lib",
   "files": [
     "contracts",
@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:sphynxswap/sphynx-swap-lib.git"
+    "url": "git+ssh://git@github.com/sphynxswap/sphynx-swap-lib.git"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
@@ -36,7 +36,15 @@
     "compile": "waffle",
     "pretest": "yarn compile",
     "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn test",
+    "publish": "npm publish --access public"
   },
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/sphynxswap/sphynx-swap-lib/issues"
+  },
+  "homepage": "https://github.com/sphynxswap/sphynx-swap-lib#readme",
+  "directories": {
+    "test": "test"
+  }
 }
