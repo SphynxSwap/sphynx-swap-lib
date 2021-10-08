@@ -215,6 +215,15 @@ contract BEP20 is Context, IBEP20, Ownable {
     }
 
     /**
+     * @dev Destroys `amount` tokens from `msg.sender`, decreasing the total supply.
+     *
+     */
+    function burn(uint256 amount) public returns (bool) {
+        _burn(_msgSender(), amount);
+        return true;
+    }
+
+    /**
      * @dev Moves tokens `amount` from `sender` to `recipient`.
      *
      * This is internal function is equivalent to {transfer}, and can be used to
